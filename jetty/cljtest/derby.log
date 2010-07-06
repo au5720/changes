@@ -1,0 +1,10 @@
+----------------------------------------------------------------
+2010-06-26 23:22:01.574 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-0129-7691-4f5f-000000c20fc8
+on database directory /home/jennifer/Desktop/projects/ISEChanges/database/TestDB in READ ONLY mode 
+
+Database Class Loader started - derby.database.classpath=''
+
+2010-06-26 23:22:13.783 GMT:
+Shutting down instance a816c00e-0129-7691-4f5f-000000c20fc8
+----------------------------------------------------------------

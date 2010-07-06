@@ -1,0 +1,28 @@
+#!/bin/bash
+#
+#	Author:	 	Jennifer Morgan
+#	Date:		26-Jun-2010
+#	Purpose:	Script to start Apache Derby DB in network mode
+#
+
+#########################################################################
+#  
+# connect 'jdbc:derby:/home/jennifer/Desktop/projects/ISEChanges/database/TestDB;create=true';
+#
+# connect 'jdbc:derby:/home/jennifer/Desktop/projects/ISEChanges/database/TestDB';
+#########################################################################
+# Only use this connection string for Network Server Access
+#------------------------------------------------------------------------
+# connect 'jdbc:derby://localhost:1527//home/jennifer/Desktop/projects/ISEChanges/database/TestDB';
+#
+#########################################################################
+
+
+export DERBY_HOME=/usr/lib/jvm/java-6-sun-1.6.0.20/db
+export PATH=$PATH:$DERBY_HOME/bin
+# To start the SQL Tool
+#ij
+
+# To Start in Network Mode
+startNetworkServer
+

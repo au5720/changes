@@ -1,0 +1,89 @@
+/*
+light-blue: #148BBF
+light-grey: #D8DFC8;
+border-color:   border : 1px solid #ccc; 
+*/
+h2  { color: #148BBF; font-weight: bold;}
+
+/*
+General Form Styling Will do the actions using AJAX
+****/
+
+fieldset { 
+  margin: 1em 0; 
+  padding: 0.5em;
+  border : 1px solid #ccc;
+  background: #f0ffff; 
+  display: inline;
+  width: 60em;
+} 
+ 
+legend ,th { 
+  font-weight: bold; 
+  color: #148BA0;
+}
+.label { 
+  display: block;
+  float: left; 
+  cursor: pointer;
+  width: 10em;
+} 
+
+tr { border: 1px solid black;} 
+
+table { empty-cells: show;}
+tbody {
+	background-color: background: #f0ff09;
+	
+}
+.odd {
+	background-color: #def; }
+.odd td {
+	border-bottom: 1px solid #cef; }
+th,td {
+  text-align: left;	
+  border-top: 2px solid #999;   
+  border-right: 1px solid #ccc; 
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+div { clear: both; padding-top: 0.5em;} 
+
+label.error { 
+	width: 30em; 
+	font-size: 0.7em;
+	color: red; 
+	margin-left: 2em; 
+}
+
+input ,textarea { 
+  width: 30em; 
+  font-size: 1em;
+} 
+
+input:focus[type="text"], textarea:focus,select:focus { 
+  background-color: #ffc; 
+}
+input[type="text"], textarea { 
+  border-top: 2px solid #999; 
+  border-left: 2px solid #999; 
+  border-bottom: 1px solid #ccc; 
+  border-right: 1px solid #ccc; 
+}  
+.required { 
+  font-size: 0.75em; 
+  color: #760000; 
+} 
+#data {
+  margin: 1em 0; 
+  padding: 0.5em;
+  border : 1px solid #ccc;
+  background: #f0ffff; 
+  display: inline;
+}
+.buttons { width: 15em; font-size: 0.7em;}
+
+
+
+

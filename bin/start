@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+#	Author:	 	Jennifer Morgan
+#	Date:		26-Jun-2010
+#	Purpose:	Script to start the Clojure REPL
+#
+export PROJ_HOME=/home/jennifer/Desktop/projects/ISEChanges
+export JARS=$PROJ_HOME/lib
+export JETTY_HOME=/usr/share/jetty
+
+#java -cp $JARS/clojure-contrib.jar:$JARS/clojure.jar:$JARS/jline-0_9_5.jar:$JETTY_HOME/lib/servlet-api-2.5.jar:/home/jennifer/Desktop/projects/ISEChanges/jetty/cljtest/:. jline.ConsoleRunner clojure.main
+
+
+# ***** BITS TO DEPLOY ANY CHANGES ******
+#cd /home/jennifer/Desktop/projects/ISEChanges/jetty/cljtest
+#../../bin/start
+#user=> (compile 'HelloServlet)
+#HelloServlet
+#cd /var/lib/jetty/webapps/hello/WEB-INF/classes
+#cp /home/jennifer/Desktop/projects/ISEChanges/jetty/cljtest/classes/* ./
+#/usr/share/jetty# java -jar start.jar
+
+java -cp $JARS/clojure-contrib.jar:$JARS/clojure.jar:$JARS/jline-0_9_5.jar:$JETTY_HOME/lib/servlet-api-2.5.jar:$JARS/derbyclient.jar:./src:./classes:. jline.ConsoleRunner clojure.main
