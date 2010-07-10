@@ -1,0 +1,7 @@
+*.log
+*.dat
+*.lck
+*-db.*
+*.class
+
+
