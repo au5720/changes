@@ -3,4 +3,9 @@
 *.lck
 *-db.*
 *.class
+<<<<<<< HEAD
 nohup.out
+=======
+
+
+>>>>>>> 08cb28bcfefa74a71ebf054698c0447147e10507

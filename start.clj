@@ -21,5 +21,5 @@
     (page-not-found)))	
 
 
-	(run-server {:port 8080}
+	(run-server {:port 80}
 	"/*" (servlet changes-server))
