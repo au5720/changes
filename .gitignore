@@ -1,0 +1,6 @@
+*.log
+*.dat
+*.lck
+*-db.*
+*.class
+nohup.out

@@ -93,8 +93,8 @@
 ; Start the server up binding it to our routes Table
 ;
 (defn start-server[]
-	(run-server {:port 80}
+	(run-server {:port 8080}
 		"/*" (servlet changes-server)))
-;(start-server)
+(start-server)
 
-;(create-repl-server 12345)
+(create-repl-server 12345)
