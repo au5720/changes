@@ -33,28 +33,47 @@ $(function(){
 				}			
 			});
 	}
+	var jsonTest = function(){
+		$.ajax({
+				type: 'post',
+				url: '/json',
+				processData: false,
+				contentType: "application/json; charset=utf-8",
+				data: '{"Zd": "2"}',
+				dataType: 'json',
+				cache: false,
+				success: function(result) {								
+					alert(result);
+				},
+				error: function(xhr, textStatus, errorThrown) {
+					alert('An error occurred! ' + ( errorThrown ? errorThrown : xhr. status ));
+				}			
+			});
+
+	}
 	// Creating the Message Bus Architecture
 	// Message Binding to Functions
 	$(document).bind('SHOW_HISTORY',showHistoryFn);
 	$(document).bind('GET_DATA',getTableDataFn);
+	$(document).bind('JSON_DATA',jsonTest);
 
 	$( ".date-pick" ).datepicker({ dateFormat: 'dd-MM-yy' });
 	$( ".date-pick" ).val('');
 	$( "#change" ).focus();
 	$('#new-change form').validate({
-	 rules: {
-		change: {
-			required: true
-		},
-		operator: {
-			required: true
-		}
-	 },
-	 messages: {
-		date: "Please input the date the change was made",
-		change: "What change are you making",
-		note: "Record a note if you wish"
-		}
+		 rules: {
+			change: {
+				required: true
+			},
+			operator: {
+				required: true
+			}
+		 },
+		 messages: {
+			date: "Please input the date the change was made",
+			change: "What change are you making",
+			note: "Record a note if you wish"
+			}
 	});
 	
 	$('.ui-state-default').hover(
@@ -68,8 +87,9 @@ $(function(){
 	$('#data').hide();	
 
 	$('#history').click(function(){
-	     $(document).trigger('GET_DATA');
-	     $(document).trigger('SHOW_HISTORY');
+	     //$(document).trigger('GET_DATA');
+	     //$(document).trigger('SHOW_HISTORY');
+	     $(document).trigger('JSON_DATA');
 	});
 
 	// Formatting

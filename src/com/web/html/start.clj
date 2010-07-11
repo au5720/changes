@@ -1,5 +1,10 @@
 (ns com.web.html.start
- (:use compojure com.db.setup clojure.contrib.server-socket))
+ (:use 
+	compojure com.db.setup 
+	clojure.contrib.server-socket 
+	clojure.contrib.json.read 
+	clojure.contrib.json.write
+	clojure.contrib.duck-streams))
  ;
  ; Includes For Project
  ;
@@ -78,10 +83,19 @@
 				)
 				]))
 ;
+; Functions to reply with some json data
+; initially just echo back what is sent
+;
+(defn get-json-data body[request]
+	(println (read-json (slurp* (request :body))))
+	)
+
 ; Define the Web App Routes
 ;
 (defroutes changes-server
 	"Create and View Snippets"
+	;(POST "/json" {body :body} (get-json-data body))
+	(POST "/json" (get-json-data request))
 	(POST "/saveChange" (save-change params))	
 	(GET "/" (home-page "Change Logger" (create-home-body)))
 	(GET "/listChanges" (list-changes))
@@ -95,6 +109,6 @@
 (defn start-server[]
 	(run-server {:port 8080}
 		"/*" (servlet changes-server)))
-(start-server)
+;(start-server)
 
-(create-repl-server 12345)
+;(create-repl-server 12345)
