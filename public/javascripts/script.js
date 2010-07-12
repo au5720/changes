@@ -34,12 +34,16 @@ $(function(){
 			});
 	}
 	var jsonTest = function(){
+		var ddata = {	"firstname" : "jennifer",
+				"lastname" : "morgan",
+				"age" : 41}
+		var dddata = JSON.stringify(ddata);
 		$.ajax({
 				type: 'post',
 				url: '/json',
-				processData: false,
-				contentType: "application/json; charset=utf-8",
-				data: '{"Zd": "2"}',
+				//processData: false,
+				contentType: "application/json",
+				data: dddata,
 				dataType: 'json',
 				cache: false,
 				success: function(result) {								

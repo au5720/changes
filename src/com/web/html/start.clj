@@ -15,12 +15,13 @@
 				(include-js "/public/javascripts/jquery-1.4.2.min.js")
 				(include-js "/public/javascripts/jquery.validate.js")
 				(include-js "/public/javascripts/jquery-ui-1.8.2.custom.min.js")
+				(include-js "/public/javascripts/json2.js")
 				(include-js "/public/javascripts/script.js")		
 				;
 				; Style Sheets
 				;
 				(include-css "/public/stylesheets/jquery-ui-1.8.2.custom.css")
-			    (include-css "/public/stylesheets/style.css")
+			        (include-css "/public/stylesheets/style.css")
 			]))
  ;
  ; The Home Page Setup script
